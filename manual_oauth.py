@@ -14,7 +14,7 @@ SCOPES = [
     'https://www.googleapis.com/auth/spreadsheets'
 ]
 
-CREDS_PATH = Path.home() / 'Projects/google-drive-mcp/gcp-oauth.keys.json'
+CREDS_PATH = Path.home() / 'Projects/mcp_servers/google-drive-mcp/gcp-oauth.keys.json'
 TOKEN_PATH = Path.home() / '.google-drive-mcp-token.json'
 
 print("=" * 70)

@@ -39,7 +39,7 @@ SCOPES = [
 HOME = Path.home()
 TOKEN_PATH = HOME / '.google-drive-mcp-token.json'
 CREDS_PATH = Path(os.environ.get('GOOGLE_APPLICATION_CREDENTIALS',
-                                  HOME / 'Projects/google-drive-mcp/gcp-oauth.keys.json'))
+                                  HOME / 'Projects/mcp_servers/google-drive-mcp/gcp-oauth.keys.json'))
 
 def get_credentials():
     """Get valid Google credentials with OAuth flow if needed"""
@@ -350,7 +350,7 @@ async def call_tool(name: str, arguments: Any) -> list[TextContent]:
                 type="text",
                 text=f"⚠️ AUTHENTICATION ERROR: Google OAuth token is expired or invalid.\n\n"
                      f"To fix this, run the following command in Terminal:\n"
-                     f"  cd ~/Projects/google-drive-mcp && ./venv/bin/python3 -c \"from gdrive_server import get_credentials; get_credentials()\"\n\n"
+                     f"  cd ~/Projects/mcp_servers/google-drive-mcp && ./venv/bin/python3 -c \"from gdrive_server import get_credentials; get_credentials()\"\n\n"
                      f"Then restart Claude Desktop."
             )]
         else:
